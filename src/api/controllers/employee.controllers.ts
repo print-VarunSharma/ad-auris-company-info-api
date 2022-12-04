@@ -10,4 +10,13 @@ export class EmployeeController {
             throw e;
         }
     }
+
+    public static getAllEmployeeProfileData(req: Request, res: Response, next: NextFunction) {
+        try {
+            const data = EmployeeService.allEmployeeProfileData();
+            res.send(data).status(200);
+        } catch (e) {
+            throw e;
+        }
+    }
 }

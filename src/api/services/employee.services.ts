@@ -41,17 +41,30 @@ class Employee implements EmployeeInterface {
 
 interface EmployeeServiceInterface {
     employeeProfileData(): EmployeeInterface;
+    allEmployeeProfileData(): EmployeeInterface[];
 }
 
 class EmployeeService implements EmployeeServiceInterface {
     public employeeProfileData(): EmployeeInterface {
         try {
-            const varun = new Employee(1, "Varun", "Sharma", "CTO");
+            const varun = new Employee(5, "Varun", "Sharma", "CTO");
             console.log(varun);
             return varun;
         } catch (e) {
             throw e;
         }
+    }
+
+    public allEmployeeProfileData(): EmployeeInterface[] {
+        const varun = new Employee(5, "Varun", "Sharma", "CTO");
+        const carlos = new Employee(2, "Carlos", "Blanco", "Sr. Engineer");
+        const griffin = new Employee(3, "Griffin", "Cook", "Full Stack Developer");
+        const tina = new Employee(4, "Tina", "Haertel", "COO");
+        const logan = new Employee(1, "Logan", "Underwood", "CEO");
+
+        const employeess = [varun, carlos, griffin, tina, logan];
+        console.group(employeess);
+        return employeess;
     }
 }
 
