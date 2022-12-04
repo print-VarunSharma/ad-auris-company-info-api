@@ -39,5 +39,20 @@ class Employee implements EmployeeInterface {
     }
 }
 
-// const varun = new Employee(1, "Varun", "Sharma", "CTO");
-// console.log(varun);
+interface EmployeeServiceInterface {
+    employeeProfileData(): EmployeeInterface;
+}
+
+class EmployeeService implements EmployeeServiceInterface {
+    public employeeProfileData(): EmployeeInterface {
+        try {
+            const varun = new Employee(1, "Varun", "Sharma", "CTO");
+            console.log(varun);
+            return varun;
+        } catch (e) {
+            throw e;
+        }
+    }
+}
+
+export default new EmployeeService();
