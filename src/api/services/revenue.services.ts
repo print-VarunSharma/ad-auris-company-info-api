@@ -39,12 +39,10 @@ interface RevenueServiceInterface {
     revenueData(): RevenueInterface;
     AllRevenueData(): RevenueInterface[];
 }
-
 class RevenueService implements RevenueServiceInterface {
     public revenueData(): RevenueInterface {
         try {
             const Jan = new Revenue(373.67, "CAD", new Date("Nov, 30, 2022"), "B2B");
-
             return Jan;
         } catch (error) {
             throw error;
@@ -74,3 +72,5 @@ class RevenueService implements RevenueServiceInterface {
         }
     }
 }
+
+export default new RevenueService();

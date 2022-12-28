@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
-        "local": "nodemon ./src/server.ts",
-        "dev": "npm run build && NODE_ENV=development node build/server.js",
+        "dev": "nodemon ./src/server.ts",
+        "dev-build": "npm run build && NODE_ENV=development node build/server.js",
         "stage": "npm run build && NODE_ENV=staging node build/server.js"
     },
     "author": "Varun D. Sharma",
