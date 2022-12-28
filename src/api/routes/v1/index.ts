@@ -1,9 +1,10 @@
 import * as express from "express";
-import employee from "./employee";
-import revenue from "./revenue";
+import employees from "./employees";
+import revenues from "./revenues";
+import investors from "./investors";
 
 const router = express.Router();
-router.use("/employees", employee);
-router.use("/finances", revenue);
-
+router.use("/employees", employees);
+router.use("/finances", revenues);
+router.use("/investors", investors);
 export default router;

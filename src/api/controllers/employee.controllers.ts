@@ -6,8 +6,8 @@ export class EmployeeController {
         try {
             const data = EmployeeService.employeeProfileData();
             res.send(data).status(200);
-        } catch (e) {
-            throw e;
+        } catch (error) {
+            throw error;
         }
     }
 
@@ -15,8 +15,8 @@ export class EmployeeController {
         try {
             const data = EmployeeService.allEmployeeProfileData();
             res.send(data).status(200);
-        } catch (e) {
-            throw e;
+        } catch (error) {
+            throw error;
         }
     }
 }

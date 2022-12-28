@@ -20,7 +20,7 @@ class Employee implements EmployeeInterface {
         this.role = role;
     }
 
-    getEmployeeId(): number {
+    getEmployeeId() {
         return this.employeeId;
     }
 

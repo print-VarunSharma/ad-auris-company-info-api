@@ -79,8 +79,8 @@ class InvestorService implements InvestorServiceInterface {
                 "Antler"
             );
             return TylerN;
-        } catch (e) {
-            throw e;
+        } catch (error) {
+            throw error;
         }
     }
 
@@ -98,6 +98,7 @@ class InvestorService implements InvestorServiceInterface {
         );
 
         const investors = [TylerN, DanielHa, YokoOno];
+        console.log(investors);
         return investors;
     }
 }
