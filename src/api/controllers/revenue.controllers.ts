@@ -5,6 +5,7 @@ export class RevenueController {
     public static getRevenueData(req: Request, res: Response, next: NextFunction) {
         try {
             const data = RevenueService.revenueData();
+            res.send(data).status(200);
         } catch (error) {
             throw error;
         }
